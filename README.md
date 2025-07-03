@@ -1,56 +1,64 @@
 # ElevenLabs Batch Calling Data Processor
 
+[![CI/CD Pipeline](https://github.com/ieiskyler/elevenlabs-batch-processor/actions/workflows/ci.yml/badge.svg)](https://github.com/ieiskyler/elevenlabs-batch-processor/actions/workflows/ci.yml)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
 A Python toolkit for managing and processing ElevenLabs batch calling data, including batch retrieval, data conversion, and recipient analysis.
 
-## Features
+## ✨ Features
 
-- **Batch Management**: Fetch batch calling data from ElevenLabs API
-- **Data Conversion**: Convert JSON batch data to CSV format
-- **Bulk Processing**: Process multiple batches from a CSV list
-- **Recipient Analysis**: Extract and analyze recipient data with phone numbers
-- **Rate Limiting**: Built-in API rate limiting to prevent quota exhaustion
+- **🔄 Batch Management**: Fetch batch calling data from ElevenLabs API
+- **📊 Data Conversion**: Convert JSON batch data to CSV format
+- **🚀 Bulk Processing**: Process multiple batches from a CSV list
+- **📞 Recipient Analysis**: Extract and analyze recipient data with phone numbers
+- **⚡ Rate Limiting**: Built-in API rate limiting to prevent quota exhaustion
+- **🔒 Secure**: Environment-based configuration (no hard-coded API keys)
+- **🧪 Tested**: Comprehensive test suite with 19 passing tests
+- **📚 Documented**: Full documentation with type hints and examples
 
-## Installation
+## 🚀 Quick Start
 
-1. Clone this repository
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Set up your environment variables:
-   ```bash
-   cp .env.example .env
-   # Edit .env with your ElevenLabs API key
-   ```
+### Installation
 
-## Configuration
+```bash
+# Clone the repository
+git clone https://github.com/ieiskyler/elevenlabs-batch-processor.git
+cd elevenlabs-batch-processor
 
-Create a `.env` file in the project root:
+# Create virtual environment
+python3 -m venv .venv
+source .venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
 ```
+
+### Configuration
+
+```bash
+# Copy environment template
+cp .env.example .env
+
+# Edit .env with your ElevenLabs API key
 ELEVENLABS_API_KEY=your_api_key_here
-ELEVENLABS_API_BASE=https://api.elevenlabs.io/v1/convai/batch-calling
 ```
 
-## Usage
+### Usage
 
-### 1. Fetch Batch History
 ```bash
-python src/batch_history.py
-```
+# Run the demo
+python demo.py
 
-### 2. Convert Single Batch JSON to CSV
-```bash
-python src/batch_converter.py input.json output.csv
-```
+# Fetch batch history
+python src/batch_history.py --output history.json
 
-### 3. Process Multiple Batches
-```bash
-python src/batch_processor.py batch_list.csv recipients_output.csv
-```
+# Convert batch data to CSV
+python src/batch_converter.py batch_data.json output.csv
 
-### 4. Convert Batch List JSON to CSV
-```bash
-python src/batch_list_converter.py batch_list.json batch_list.csv
+# Process multiple batches
+python src/batch_processor.py batch_list.csv recipients.csv
 ```
 
 ## Project Structure
