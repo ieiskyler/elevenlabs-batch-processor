@@ -7,7 +7,7 @@ echo "🚀 Setting up GitHub repository for ElevenLabs Batch Processor"
 echo "=================================================="
 
 # Get GitHub username
-read -p "Enter your GitHub username: " GITHUB_USERNAME
+GITHUB_USERNAME="ieiskyler"
 
 # Repository name
 REPO_NAME="elevenlabs-batch-processor"

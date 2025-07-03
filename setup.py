@@ -12,12 +12,12 @@ long_description = (this_directory / "README.md").read_text(encoding='utf-8')
 setup(
     name="elevenlabs-batch-processor",
     version="1.0.0",
-    author="Your Name",
+    author="ieiskyler",
     author_email="your.email@example.com",
     description="A Python toolkit for managing and processing ElevenLabs batch calling data",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/elevenlabs-batch-processor",
+    url="https://github.com/ieiskyler/elevenlabs-batch-processor",
     packages=find_packages(where="src"),
     package_dir={"": "src"},
     classifiers=[
@@ -58,8 +58,8 @@ setup(
     },
     keywords="elevenlabs api batch calling data processing csv json",
     project_urls={
-        "Bug Reports": "https://github.com/yourusername/elevenlabs-batch-processor/issues",
-        "Source": "https://github.com/yourusername/elevenlabs-batch-processor",
-        "Documentation": "https://github.com/yourusername/elevenlabs-batch-processor#readme",
+        "Bug Reports": "https://github.com/ieiskyler/elevenlabs-batch-processor/issues",
+        "Source": "https://github.com/ieiskyler/elevenlabs-batch-processor",
+        "Documentation": "https://github.com/ieiskyler/elevenlabs-batch-processor#readme",
     },
 )
